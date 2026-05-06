@@ -4,7 +4,7 @@ import { AboutSection } from "@/components/home/AboutSection";
 import { LoveDoberman } from "@/components/home/LoveDoberman";
 import { BreedingGoals } from "@/components/home/BreedingGoals";
 import { Poem } from "@/components/home/Poem";
-import { GalleryPreview } from "@/components/home/GalleryPreview";
+import { News } from "@/components/home/News";
 import { CallToAction } from "@/components/home/CallToAction";
 
 export const metadata = buildMetadata({
@@ -21,7 +21,7 @@ export default function HomePage() {
       <LoveDoberman />
       <BreedingGoals />
       <Poem />
-      <GalleryPreview />
+      <News />
       <CallToAction />
     </main>
   );
