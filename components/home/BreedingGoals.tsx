@@ -46,7 +46,7 @@ export function BreedingGoals() {
               <h3 className="font-serif text-2xl font-bold text-text mb-4">
                 {pillar.title}
               </h3>
-              <p className="text-sm text-text/55 leading-relaxed">
+              <p className="text-sm text-text/85 leading-relaxed">
                 {pillar.description}
               </p>
             </div>
@@ -55,7 +55,7 @@ export function BreedingGoals() {
 
         {/* Closing statement */}
         <div className="mt-16 border-t border-border pt-12 max-w-3xl">
-          <p className="text-text/50 leading-relaxed text-sm">
+          <p className="text-text/85 leading-relaxed text-sm">
             A well-behaved dog is important to us, but it should not be our
             only goal. When a dog embodies all breed-specific characteristics —
             stable character, robust health, and working drive — we can say with

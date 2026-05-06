@@ -11,7 +11,7 @@ export function CallToAction() {
         <h2 className="font-serif text-4xl md:text-5xl font-bold text-text mb-6">
           Interested in a Puppy?
         </h2>
-        <p className="text-text/50 leading-relaxed mb-10 text-base max-w-xl mx-auto">
+        <p className="text-text/85 leading-relaxed mb-10 text-base max-w-xl mx-auto">
           We breed with care and purpose. If you are looking for a Di Casa
           Montenegro Doberman, reach out — we speak Serbian and English.
         </p>

@@ -14,7 +14,7 @@ export function AboutSection() {
               src="/about1.jpg"
               alt="Di Casa Montenegro Doberman"
               fill
-              className="object-cover grayscale hover:grayscale-0 transition-all duration-700"
+              className="object-cover transition-all duration-700"
               sizes="(max-width: 1024px) 100vw, 50vw"
             />
           </div>
@@ -24,7 +24,7 @@ export function AboutSection() {
               src="/about2.jpg"
               alt="Di Casa Montenegro Doberman"
               fill
-              className="object-cover grayscale hover:grayscale-0 transition-all duration-700"
+              className="object-cover transition-all duration-700"
               sizes="20vw"
             />
           </div>
@@ -40,7 +40,7 @@ export function AboutSection() {
             subtitle="International FCI Judge and passionate Doberman breeder based in Futog, Serbia — on the coast of the Danube River near Novi Sad."
           />
 
-          <div className="mt-8 space-y-4 text-text/60 leading-relaxed text-sm">
+          <div className="mt-8 space-y-4 text-text/85 leading-relaxed text-sm">
             <p>
               My relationship with Dobermans began in 1992 when I received my first
               female, Alisa, as a gift. She wasn&apos;t a show champion, but she

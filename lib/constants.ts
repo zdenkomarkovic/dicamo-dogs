@@ -21,6 +21,11 @@ export const OWNER = {
   title: "International FCI Judge",
 };
 
+export const SOCIAL = {
+  facebook: "https://www.facebook.com/milan.rudovic?fref=ts",
+  youtube: "https://www.youtube.com/channel/UCOcMPaqjlPaSlr_zcPLPx5Q",
+};
+
 export const NAV_LINKS = [
   { label: "Home", href: "/" },
   { label: "About", href: "/about" },

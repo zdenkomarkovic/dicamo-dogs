@@ -28,7 +28,7 @@ export function SectionTitle({
         {title}
       </h2>
       {subtitle && (
-        <p className="text-text/50 leading-relaxed max-w-2xl text-base">
+        <p className="text-text/85 leading-relaxed max-w-2xl text-base">
           {subtitle}
         </p>
       )}

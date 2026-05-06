@@ -25,7 +25,7 @@ export default function GalleryPage() {
           <h1 className="font-serif text-5xl md:text-6xl font-bold text-text mb-6">
             Gallery
           </h1>
-          <p className="text-text/50 leading-relaxed max-w-lg">
+          <p className="text-text/85 leading-relaxed max-w-lg">
             A selection of Dobermans bred and raised at Di Casa Montenegro kennel
             in Futog, Serbia.
           </p>
@@ -47,7 +47,7 @@ export default function GalleryPage() {
                   src={img.src}
                   alt={img.alt}
                   fill
-                  className="object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700"
+                  className="object-cover group-hover:scale-105 transition-all duration-700"
                   sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                 />
                 <div className="absolute inset-0 bg-dark/30 group-hover:bg-dark/0 transition-colors duration-700" />

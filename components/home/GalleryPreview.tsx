@@ -25,7 +25,7 @@ export function GalleryPreview() {
               src="/about1.jpg"
               alt="Di Casa Montenegro Doberman"
               fill
-              className="object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700"
+              className="object-cover group-hover:scale-105 transition-all duration-700"
               sizes="(max-width: 640px) 100vw, 50vw"
             />
             <div className="absolute inset-0 bg-dark/20 group-hover:bg-dark/0 transition-colors duration-700" />
@@ -35,7 +35,7 @@ export function GalleryPreview() {
               src="/about2.jpg"
               alt="Di Casa Montenegro Doberman"
               fill
-              className="object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700"
+              className="object-cover group-hover:scale-105 transition-all duration-700"
               sizes="(max-width: 640px) 100vw, 50vw"
             />
             <div className="absolute inset-0 bg-dark/20 group-hover:bg-dark/0 transition-colors duration-700" />

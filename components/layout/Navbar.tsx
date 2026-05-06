@@ -21,7 +21,7 @@ export function Navbar() {
           <span className="font-serif text-xl font-bold tracking-widest text-gold uppercase">
             Di Casa
           </span>
-          <span className="font-serif text-sm tracking-[0.3em] text-text/70 uppercase">
+          <span className="font-serif text-sm tracking-[0.3em] text-text/85 uppercase">
             Montenegro
           </span>
         </Link>
@@ -35,7 +35,7 @@ export function Navbar() {
                 className={`text-sm tracking-widest uppercase transition-colors duration-200 ${
                   pathname === link.href
                     ? "text-gold"
-                    : "text-text/60 hover:text-gold"
+                    : "text-text/85 hover:text-gold"
                 }`}
               >
                 {link.label}
@@ -74,7 +74,7 @@ export function Navbar() {
                   className={`block text-sm tracking-widest uppercase transition-colors duration-200 ${
                     pathname === link.href
                       ? "text-gold"
-                      : "text-text/60 hover:text-gold"
+                      : "text-text/85 hover:text-gold"
                   }`}
                 >
                   {link.label}

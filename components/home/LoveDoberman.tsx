@@ -40,7 +40,7 @@ export function LoveDoberman() {
           The Bond
         </p>
 
-        <p className="font-serif text-2xl md:text-3xl lg:text-4xl text-text/60 mb-4 tracking-wide">
+        <p className="font-serif text-2xl md:text-3xl lg:text-4xl text-text/85 mb-4 tracking-wide">
           I love my Doberman because
         </p>
 

@@ -1,5 +1,5 @@
 import { buildMetadata } from "@/lib/metadata";
-import { CONTACT, OWNER } from "@/lib/constants";
+import { CONTACT, OWNER, SOCIAL } from "@/lib/constants";
 
 export const metadata = buildMetadata({
   title: "Contact",
@@ -28,6 +28,26 @@ const contactItems = [
     href: `mailto:${CONTACT.email}`,
   },
   {
+    label: "Viber",
+    lines: [CONTACT.mobile],
+    href: `viber://chat?number=${CONTACT.mobile.replace(/[\s+]/g, "")}`,
+  },
+  {
+    label: "WhatsApp",
+    lines: [CONTACT.mobile],
+    href: `https://wa.me/${CONTACT.mobile.replace(/[\s+]/g, "")}`,
+  },
+  {
+    label: "Facebook",
+    lines: ["Milan Rudović"],
+    href: SOCIAL.facebook,
+  },
+  {
+    label: "YouTube",
+    lines: ["Di Casa Montenegro"],
+    href: SOCIAL.youtube,
+  },
+  {
     label: "Languages",
     lines: [CONTACT.languages],
   },
@@ -45,7 +65,7 @@ export default function ContactPage() {
           <h1 className="font-serif text-5xl md:text-6xl font-bold text-text mb-6">
             Contact Us
           </h1>
-          <p className="text-text/50 leading-relaxed max-w-lg">
+          <p className="text-text/85 leading-relaxed max-w-lg">
             We are happy to answer questions about our Dobermans, upcoming
             litters, or the breed in general. We speak Serbian and English.
           </p>
@@ -74,12 +94,12 @@ export default function ContactPage() {
                     {href ? (
                       <a
                         href={href}
-                        className="text-text/70 hover:text-gold transition-colors duration-200 text-sm leading-relaxed"
+                        className="text-text/85 hover:text-gold transition-colors duration-200 text-sm leading-relaxed"
                       >
                         {lines.join(", ")}
                       </a>
                     ) : (
-                      <span className="text-text/70 text-sm leading-relaxed">
+                      <span className="text-text/85 text-sm leading-relaxed">
                         {lines.map((line, i) => (
                           <span key={i} className="block">
                             {line}
@@ -114,7 +134,7 @@ export default function ContactPage() {
             <h3 className="font-serif text-xl font-bold text-text mb-6">
               About the Kennel
             </h3>
-            <div className="space-y-5 text-sm text-text/55 leading-relaxed">
+            <div className="space-y-5 text-sm text-text/85 leading-relaxed">
               <p>
                 Di Casa Montenegro is an FCI registered Doberman kennel (No.
                 4033) based in Futog, a town on the Danube River near Novi Sad,
@@ -137,7 +157,7 @@ export default function ContactPage() {
               <p className="text-xs tracking-widest uppercase text-muted mb-3">
                 Response time
               </p>
-              <p className="text-sm text-text/60">
+              <p className="text-sm text-text/85">
                 We aim to respond to all enquiries within 24–48 hours. For
                 urgent matters, please call directly.
               </p>
@@ -148,13 +168,13 @@ export default function ContactPage() {
                 <p className="text-xs tracking-widest uppercase text-gold mb-2">
                   Languages
                 </p>
-                <p className="text-sm text-text/60">Serbian · English</p>
+                <p className="text-sm text-text/85">Serbian · English</p>
               </div>
               <div>
                 <p className="text-xs tracking-widest uppercase text-gold mb-2">
                   FCI Judge
                 </p>
-                <p className="text-sm text-text/60">International</p>
+                <p className="text-sm text-text/85">International</p>
               </div>
             </div>
           </div>

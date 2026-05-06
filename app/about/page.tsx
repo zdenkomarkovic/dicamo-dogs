@@ -59,7 +59,7 @@ export default function AboutPage() {
           <h1 className="font-serif text-5xl md:text-6xl font-bold text-text mb-6 max-w-2xl leading-tight">
             The Story of the Kennel
           </h1>
-          <p className="text-text/50 text-base leading-relaxed max-w-xl">
+          <p className="text-text/85 text-base leading-relaxed max-w-xl">
             A lifelong passion for Dobermans, three decades of breeding, and a
             commitment to preserving one of the world&apos;s most iconic working
             breeds.
@@ -76,7 +76,7 @@ export default function AboutPage() {
               title={OWNER.name}
               subtitle={`${OWNER.title} · Di Casa Montenegro · Futog, Serbia`}
             />
-            <div className="mt-8 space-y-4 text-sm text-text/60 leading-relaxed">
+            <div className="mt-8 space-y-4 text-sm text-text/85 leading-relaxed">
               <p>
                 I live in Futog, a place located on the coast of the Danube River
                 near Novi Sad, Serbia. My name is Milan Rudović, and I am an
@@ -106,7 +106,7 @@ export default function AboutPage() {
                     <dt className="w-24 shrink-0 text-muted text-xs tracking-wider uppercase self-start pt-0.5">
                       {label}
                     </dt>
-                    <dd className="text-text/70">{value}</dd>
+                    <dd className="text-text/85">{value}</dd>
                   </div>
                 ))}
               </dl>
@@ -172,7 +172,7 @@ export default function AboutPage() {
                         <h3 className="font-serif text-xl font-bold text-text mb-3">
                           {item.title}
                         </h3>
-                        <p className="text-sm text-text/55 leading-relaxed">
+                        <p className="text-sm text-text/85 leading-relaxed">
                           {item.text}
                         </p>
                       </div>
@@ -188,7 +188,7 @@ export default function AboutPage() {
                         <h3 className="font-serif text-xl font-bold text-text mb-3">
                           {item.title}
                         </h3>
-                        <p className="text-sm text-text/55 leading-relaxed">
+                        <p className="text-sm text-text/85 leading-relaxed">
                           {item.text}
                         </p>
                       </div>
