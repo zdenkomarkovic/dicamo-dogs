@@ -1,0 +1,29 @@
+export const SITE_URL =
+  process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000";
+
+export const SITE_NAME = "Di Casa Montenegro";
+
+export const SITE_DESCRIPTION =
+  "International FCI Doberman Kennel based in Futog, Serbia. Breeding healthy, noble, and strong Dobermans with open character and big potential for work.";
+
+export const CONTACT = {
+  email: "dicasamne@gmail.com",
+  phone: "+381 21 896241",
+  mobile: "+381 64 1168053",
+  address: "Futog, Serbia",
+  zip: "21410",
+  country: "Serbia",
+  languages: "Serbian, English",
+};
+
+export const OWNER = {
+  name: "Milan Rudović",
+  title: "International FCI Judge",
+};
+
+export const NAV_LINKS = [
+  { label: "Home", href: "/" },
+  { label: "About", href: "/about" },
+  { label: "Gallery", href: "/gallery" },
+  { label: "Contact", href: "/contact" },
+];
