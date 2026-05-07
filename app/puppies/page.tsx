@@ -61,7 +61,7 @@ export default function PuppiesPage() {
                   </p>
                 </div>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-px bg-border">
-                  {litter.parents.map((parent) => (
+                  {litter.parents?.map((parent) => (
                     <div key={parent.name} className="bg-dark p-8">
                       {parent.image && (
                         <div className="mb-6 w-48 overflow-hidden">
