@@ -4,7 +4,9 @@
       "Bash(dir:*)",
       "Bash(node --version:*)",
       "Bash(npm:*)",
-      "Bash(identify E:/Sajtovi/dicamo-dogs/public/hero.png)"
+      "Bash(identify E:/Sajtovi/dicamo-dogs/public/hero.png)",
+      "Bash(git add *)",
+      "Bash(git commit -m ' *)"
     ]
   }
 }
