@@ -22,7 +22,7 @@ export function Hero() {
       {/* Content */}
       <div className="relative z-10 text-center px-6 max-w-4xl mx-auto">
         <p className="text-xs tracking-[0.4em] uppercase text-gold mb-6 font-semibold">
-          FCI Registered Kennel · No. 4033
+          FCI Kennel · No. 4033
         </p>
 
         <h1 className="font-serif text-5xl md:text-7xl lg:text-8xl font-bold text-text leading-none mb-2 tracking-wide">
@@ -37,9 +37,7 @@ export function Hero() {
         <p className="text-white/90 text-lg md:text-xl tracking-widest uppercase mb-2">
           Doberman Kennel
         </p>
-        <p className="text-white/90 text-sm tracking-wider mb-12">
-          Futog, Serbia · International FCI
-        </p>
+        <p className="text-white/90 text-sm tracking-wider mb-12">Futog, Serbia</p>
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <Link

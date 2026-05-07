@@ -48,7 +48,7 @@ export function News() {
                         <Link href={item.link.href} className="text-gold hover:text-gold-light transition-colors duration-200">
                           {item.link.label}
                         </Link>
-                        ".
+                        &quot;.
                       </p>
                     )}
                   </div>
