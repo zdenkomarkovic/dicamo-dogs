@@ -21,7 +21,7 @@ export function AboutSection() {
           {/* Floating second image */}
           <div className="absolute -bottom-8 -right-4 w-2/5 aspect-square overflow-hidden border-4 border-dark shadow-2xl">
             <Image
-              src="/about2.jpg"
+              src="/breeder.jpeg"
               alt="Di Casa Montenegro Doberman"
               fill
               className="object-cover transition-all duration-700"
@@ -42,20 +42,19 @@ export function AboutSection() {
 
           <div className="mt-8 space-y-4 text-text/85 leading-relaxed text-sm">
             <p>
-              My relationship with Dobermans began in 1992 when I received my first
-              female, Alisa, as a gift. She wasn&apos;t a show champion, but she
-              ignited something in me — a lifelong passion for this noble breed.
+              My relationship with Dobermans began in 1992 when I received my first female, Alisa,
+              as a gift. She wasn&apos;t a show champion, but she ignited something in me — a
+              lifelong passion for this noble breed.
             </p>
             <p>
-              After years of learning, attending shows, and becoming an FCI judge,
-              I registered kennel{" "}
-              <span className="text-gold font-semibold">Di Casa Montenegro</span>{" "}
-              (No. 4033) and fully committed to the Doberman breed.
+              After years of learning, attending shows, and becoming an FCI judge, I registered
+              kennel <span className="text-gold font-semibold">Di Casa Montenegro</span> (No. 4033)
+              and fully committed to the Doberman breed.
             </p>
             <p>
-              Today, dogs from my kennel can be found all around the world, and my
-              goal remains unchanged: to produce healthy, noble, strong Dobermans
-              with open character and great working potential.
+              Today, dogs from my kennel can be found all around the world, and my goal remains
+              unchanged: to produce healthy, noble, strong Dobermans with open character and great
+              working potential.
             </p>
           </div>
 
