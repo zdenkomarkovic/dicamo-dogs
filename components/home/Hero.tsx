@@ -35,7 +35,7 @@ export function Hero() {
         <div className="w-16 h-px bg-gold mx-auto mb-8" />
 
         <p className="text-white/90 text-lg md:text-xl tracking-widest uppercase mb-2">
-          Doberman Kennel
+          European Doberman Kennel
         </p>
         <p className="text-white/90 text-sm tracking-wider mb-12">Futog, Serbia</p>
 
