@@ -30,6 +30,7 @@ export const NAV_LINKS = [
   { label: "Home", href: "/" },
   { label: "About", href: "/about" },
   { label: "Puppies", href: "/puppies" },
+  { label: "Litters", href: "/litters" },
   { label: "Gallery", href: "/gallery" },
   { label: "Video", href: "/video" },
   { label: "Friends & Partners", href: "/friends-partners" },
