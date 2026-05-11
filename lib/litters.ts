@@ -29,7 +29,7 @@ export const litters: Litter[] = [
     status: "expected",
     expectedDate: "April 2026",
     intro:
-      "WE PLANNED NEW LITTERS IN SPRING 2026.\nMore details soon…\nThey are high quality puppies for dog shows and work.\nMy puppies are available only for homes where they will be beloved pets and companions, which means to live within the owner's family!\nIf you are interested in puppies with cropped ears and tails, you must contact us before puppies will be born.",
+      "WE PLANNED NEW LITTERS IN 2026.\nPUPPIES ARE BORN!\n\nThey are high quality puppies for dog shows and work.\nMy puppies are available only for homes where they will be beloved pets and companions, which means to live within the owner's family!\nIf you are interested in puppies with natural ears and tails,\nyou must contact us before puppies will be born.\nWhy not reserve your puppy now?\nSend me a mail!",
     parents: [
       {
         name: "CICERON DI DIWINUM",
@@ -44,7 +44,7 @@ export const litters: Litter[] = [
           "CARDIO-free (EKG, ECHO, dOPPLER – free)",
         ],
         work: ["BH", "IGP-1"],
-        image: "/Ciceron-sedi.jpg",
+        image: "/Ciceron-za-sajt.jpg",
       },
       {
         name: "ALKYRA DI CASA MONTENEGRO",
@@ -58,7 +58,7 @@ export const litters: Litter[] = [
           "CARDIO-free (EKG, ECHO, Doppler – free)",
         ],
         work: ["BH", "IGP-1"],
-        image: "/Alkyra-sedi--e1622543469142.jpg",
+        image: "/kira-e1622919559665-768x674.jpg",
       },
     ],
     pedigree: {
@@ -126,7 +126,7 @@ export const litters: Litter[] = [
     status: "expected",
     expectedDate: "",
     intro:
-      "WE PLANNED NEW LITTERS!\nMORE DETAILS SOON…\nThey are high quality puppies for dog show and work.\nMy puppies available only for homes where they will be beloved pets and companions, which means to live within the owner's family!\nIf you are interested in puppies with cropped ears and tails, you must contact us before puppies will be born.",
+      "WE EXPECT NEW LITTER!\n\nPuppies will be born at end of June – early July.\nThey are high quality puppies for dog show and work.\nMy puppies available only for homes where they will be beloved pets and companions, which means to live within the owner's family!\nIf you are interested in puppies with natural ears and tails,\nyou must contact us before puppies will be born.\nWhy not reserve your puppy now?\nSend me a mail!",
     parents: [
       {
         name: "FLYNN DI PERLANERA",

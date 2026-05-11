@@ -1,7 +1,8 @@
 import Image from "next/image";
 import { buildMetadata } from "@/lib/metadata";
 import { litters } from "@/lib/litters";
-import { PedigreeTable } from "@/components/ui/PedigreeTable";
+import { PedigreeToggle } from "@/components/ui/PedigreeToggle";
+import { PuppiesHero } from "./PuppiesHero";
 
 export const metadata = buildMetadata({
   title: "Puppies",
@@ -12,104 +13,98 @@ export const metadata = buildMetadata({
 export default function PuppiesPage() {
   return (
     <main className="pt-24">
-      {/* Header */}
-      <section className="py-20 px-6 border-b border-border">
-        <div className="mx-auto max-w-6xl">
-          <p className="text-xs tracking-[0.4em] uppercase text-gold mb-4 font-semibold">
-            Di Casa Montenegro
-          </p>
-          <h1 className="font-serif text-5xl md:text-6xl font-bold text-text mb-6">Puppies</h1>
-        </div>
-      </section>
+      <PuppiesHero />
 
       {/* Litters */}
       <section className="py-20 px-6">
-        <div className="mx-auto max-w-6xl space-y-24">
+        <div className="mx-auto max-w-6xl space-y-20">
           {litters.map((litter) => (
-            <div key={litter.letter}>
+            <div key={litter.letter} className="border border-border">
               {/* Litter header */}
-              <div className="flex items-center gap-6 mb-10">
-                <p className="font-serif text-6xl font-bold text-gold/20 select-none leading-none">
+              <div className="flex items-center gap-6 px-8 py-6 border-b border-border bg-[#1a1a1a]">
+                <span className="font-serif text-5xl font-bold text-gold/30 select-none leading-none">
                   &ldquo;{litter.letter}&rdquo;
-                </p>
+                </span>
                 <div>
                   <h2 className="font-serif text-2xl font-bold text-text">
                     &ldquo;{litter.letter}&rdquo; Litter
                   </h2>
+                  <p className="text-xs tracking-widest uppercase text-gold mt-1">
+                    {litter.expectedDate}
+                  </p>
                 </div>
               </div>
 
               {/* Intro text */}
-              <div className="max-w-2xl mb-14">
-                <p className="text-text/85 text-sm leading-relaxed">
+              <div className="px-8 py-8 border-b border-border">
+                <div className="max-w-2xl text-text/85 text-base leading-relaxed space-y-1 text-center mx-auto">
                   {litter.intro.split("\n").map((line, i) => (
-                    <span key={i} className="block">
+                    <p key={i} className={line === "" ? "h-3" : ""}>
                       {line}
-                    </span>
+                    </p>
                   ))}
-                </p>
+                </div>
               </div>
 
               {/* Parents */}
-              <div>
-                <div className="mb-8">
-                  <p className="text-sm font-bold text-text tracking-wide">
-                    PARENTS OF &ldquo;{litter.letter}&rdquo; LITTER:
-                  </p>
-                  <p className="text-xs tracking-widest uppercase text-gold mt-1">
-                    (expected in April)
-                  </p>
-                </div>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-px bg-border">
-                  {litter.parents?.map((parent) => (
-                    <div key={parent.name} className="bg-dark p-8">
-                      {parent.image && (
-                        <div className="mb-6 w-48 overflow-hidden">
-                          <Image
-                            src={parent.image}
-                            alt={parent.name}
-                            width={400}
-                            height={500}
-                            className="w-full h-auto"
-                          />
-                        </div>
-                      )}
-                      <h3 className="font-serif text-xl font-bold text-text mb-1">{parent.name}</h3>
-                      <p className="text-xs text-muted tracking-wide mb-5">({parent.pedigree})</p>
-
-                      {parent.titles.length > 0 && (
-                        <div className="mb-5">
-                          {parent.titles.map((t) => (
-                            <p
-                              key={t}
-                              className="text-xs tracking-widest uppercase text-gold font-semibold"
-                            >
-                              {t}
-                            </p>
-                          ))}
-                        </div>
-                      )}
-
-                      <div className="space-y-4 text-sm">
-                        <ul className="space-y-1">
-                          {parent.health.map((h) => (
-                            <li key={h} className="text-text/85 flex gap-2">
-                              <span className="text-gold/50">–</span> {h}
-                            </li>
-                          ))}
-                        </ul>
-                        <p className="text-text/85">{parent.work.join(", ")}</p>
-                      </div>
-                    </div>
-                  ))}
-                </div>
-
-                {litter.pedigree && (
-                  <div className="mt-10">
-                    <PedigreeTable sire={litter.pedigree.sire} dam={litter.pedigree.dam} />
+              {litter.parents && (
+                <div>
+                  <div className="px-8 py-4 border-b border-border bg-[#1a1a1a]">
+                    <p className="text-xs tracking-[0.3em] uppercase text-muted font-semibold">
+                      Parents of &ldquo;{litter.letter}&rdquo; Litter
+                    </p>
                   </div>
-                )}
-              </div>
+                  <div className="grid grid-cols-1 md:grid-cols-2 divide-y md:divide-y-0 md:divide-x divide-border">
+                    {litter.parents.map((parent) => (
+                      <div key={parent.name} className="p-8 flex flex-col gap-6">
+                        {parent.image && (
+                          <div className="relative w-full overflow-hidden">
+                            <Image
+                              src={parent.image}
+                              alt={parent.name}
+                              width={700}
+                              height={700}
+                              className="w-full h-auto object-cover"
+                            />
+                          </div>
+                        )}
+                        <div>
+                          <h3 className="font-serif text-2xl font-bold text-text">{parent.name}</h3>
+                          <p className="text-sm text-muted tracking-wide mt-1 mb-4">
+                            {parent.pedigree}
+                          </p>
+                          {parent.titles.length > 0 && (
+                            <div className="mb-4 space-y-1">
+                              {parent.titles.map((t) => (
+                                <p key={t} className="text-sm tracking-widest uppercase text-gold font-semibold">
+                                  {t}
+                                </p>
+                              ))}
+                            </div>
+                          )}
+                          <ul className="space-y-2 mb-4">
+                            {parent.health.map((h) => (
+                              <li key={h} className="text-base text-text/85 flex gap-2">
+                                <span className="text-gold/50 shrink-0">–</span> {h}
+                              </li>
+                            ))}
+                          </ul>
+                          {parent.work.length > 0 && (
+                            <p className="text-base text-text/85">{parent.work.join(", ")}</p>
+                          )}
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              )}
+
+              {/* Pedigree */}
+              {litter.pedigree && (
+                <div className="px-8 py-6 border-t border-border bg-[#1a1a1a]">
+                  <PedigreeToggle sire={litter.pedigree.sire} dam={litter.pedigree.dam} />
+                </div>
+              )}
             </div>
           ))}
         </div>

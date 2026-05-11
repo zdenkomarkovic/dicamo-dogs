@@ -6,17 +6,18 @@ import { useState, useEffect, useCallback } from "react";
 type Litter = {
   title: string;
   subtitle?: string;
+  note?: string;
   father: string;
   mother: string;
-  fatherImg: string;
-  motherImg: string;
+  fatherImg?: string;
+  motherImg?: string;
 };
 
 export function LitterCard({ litter }: { litter: Litter }) {
   const images = [
-    { src: litter.fatherImg, alt: litter.father },
-    { src: litter.motherImg, alt: litter.mother },
-  ];
+    litter.fatherImg ? { src: litter.fatherImg, alt: litter.father } : null,
+    litter.motherImg ? { src: litter.motherImg, alt: litter.mother } : null,
+  ].filter(Boolean) as { src: string; alt: string }[];
   const [lightbox, setLightbox] = useState<number | null>(null);
 
   const prev = useCallback(() => {
@@ -42,7 +43,7 @@ export function LitterCard({ litter }: { litter: Litter }) {
     <>
       <div className="border border-border bg-[#444444]">
         {/* Images */}
-        <div className="grid grid-cols-2 gap-2 p-4">
+        <div className={`grid gap-2 p-4 ${images.length === 1 ? "grid-cols-1" : "grid-cols-2"}`}>
           {images.map((img, i) => (
             <div key={img.src} className="flex flex-col items-center gap-2">
               <button
@@ -67,6 +68,11 @@ export function LitterCard({ litter }: { litter: Litter }) {
           <h2 className="font-serif text-xl font-bold text-text mb-1">
             {litter.title}
           </h2>
+          {litter.note && (
+            <p className="text-xs tracking-wider text-muted italic mb-2">
+              {litter.note}
+            </p>
+          )}
           {litter.subtitle && (
             <p className="text-xs tracking-[0.3em] uppercase text-gold mb-4">
               {litter.subtitle}
