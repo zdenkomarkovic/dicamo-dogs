@@ -7,7 +7,7 @@ export const metadata = buildMetadata({
     "Photos of Dobermans from Di Casa Montenegro kennel — International Champion dogs bred in Futog, Serbia.",
 });
 
-type GallerySectionData = { title: string; images: { src: string; alt: string }[] };
+type GallerySectionData = { title: string; images: { src: string; alt: string; caption?: string }[] };
 
 const sections: GallerySectionData[] = [
   {
