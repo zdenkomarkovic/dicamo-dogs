@@ -78,7 +78,9 @@ export function GallerySection({ title, images }: { title: string; images: Galle
       )}
 
       {/* Lightbox */}
-      {lightbox !== null && (
+      {lightbox !== null && (() => {
+        const current = images[lightbox]!;
+        return (
         <div
           className="fixed inset-0 z-50 bg-dark/95 flex items-center justify-center"
           onClick={closeLightbox}
@@ -112,8 +114,8 @@ export function GallerySection({ title, images }: { title: string; images: Galle
             onClick={(e) => e.stopPropagation()}
           >
             <Image
-              src={images[lightbox].src}
-              alt={images[lightbox].alt}
+              src={current.src}
+              alt={current.alt}
               width={1200}
               height={900}
               className="object-contain max-h-[85vh] w-full h-auto"
@@ -131,7 +133,8 @@ export function GallerySection({ title, images }: { title: string; images: Galle
             </button>
           )}
         </div>
-      )}
+        );
+      })()}
     </div>
   );
 }

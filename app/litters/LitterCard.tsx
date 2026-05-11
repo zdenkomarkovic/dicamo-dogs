@@ -86,7 +86,9 @@ export function LitterCard({ litter }: { litter: Litter }) {
       </div>
 
       {/* Lightbox */}
-      {lightbox !== null && (
+      {lightbox !== null && (() => {
+        const current = images[lightbox]!;
+        return (
         <div
           className="fixed inset-0 z-50 bg-dark/95 flex items-center justify-center"
           onClick={() => setLightbox(null)}
@@ -99,7 +101,7 @@ export function LitterCard({ litter }: { litter: Litter }) {
           </button>
 
           <span className="absolute top-6 left-1/2 -translate-x-1/2 text-sm tracking-wide text-text/80">
-            {images[lightbox].alt}
+            {current.alt}
           </span>
 
           <button
@@ -114,8 +116,8 @@ export function LitterCard({ litter }: { litter: Litter }) {
             onClick={(e) => e.stopPropagation()}
           >
             <Image
-              src={images[lightbox].src}
-              alt={images[lightbox].alt}
+              src={current.src}
+              alt={current.alt}
               width={900}
               height={900}
               className="object-contain max-h-[85vh] w-full h-auto"
@@ -130,7 +132,8 @@ export function LitterCard({ litter }: { litter: Litter }) {
             →
           </button>
         </div>
-      )}
+        );
+      })()}
     </>
   );
 }
