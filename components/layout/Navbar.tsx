@@ -66,7 +66,6 @@ export function Navbar() {
               <li key={link.href}>
                 <Link
                   href={link.href!}
-                  {...(link.external ? { target: "_blank", rel: "noopener noreferrer" } : {})}
                   className={`text-sm tracking-widest uppercase transition-colors duration-200 ${
                     pathname === link.href ? "text-gold" : "text-text/85 hover:text-gold"
                   }`}
@@ -140,7 +139,6 @@ export function Navbar() {
                   <Link
                     href={link.href!}
                     onClick={() => setOpen(false)}
-                    {...(link.external ? { target: "_blank", rel: "noopener noreferrer" } : {})}
                     className={`block text-sm tracking-widest uppercase transition-colors duration-200 ${
                       pathname === link.href ? "text-gold" : "text-text/85 hover:text-gold"
                     }`}
