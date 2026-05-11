@@ -31,5 +31,15 @@ export const NAV_LINKS = [
   { label: "About", href: "/about" },
   { label: "Puppies", href: "/puppies" },
   { label: "Gallery", href: "/gallery" },
+  { label: "Video", href: "/video" },
+  { label: "Friends & Partners", href: "/friends-partners" },
+  {
+    label: "Guestbook",
+    href: "#",
+    dropdown: [
+      { label: "Guestbook", href: "https://www.ultraguest.com/view/1631738056", external: true },
+      { label: "Old Guestbook", href: "/old-guestbook", external: false },
+    ],
+  },
   { label: "Contact", href: "/contact" },
 ];

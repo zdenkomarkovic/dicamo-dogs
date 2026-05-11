@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { CONTACT, NAV_LINKS, OWNER, SITE_NAME, SOCIAL } from "@/lib/constants";
 
 export function Footer() {
@@ -8,15 +9,24 @@ export function Footer() {
         <div className="grid grid-cols-1 gap-12 md:grid-cols-3">
           {/* Brand */}
           <div>
-            <h3 className="font-serif text-xl font-bold tracking-widest text-gold uppercase mb-1">
-              Di Casa Montenegro
-            </h3>
+            <div className="flex items-center gap-3 mb-3">
+              <Image
+                src="/logo.jpeg"
+                alt="Di Casa Montenegro logo"
+                width={150}
+                height={150}
+                className="object-cover"
+              />
+              <h3 className="font-serif text-xl font-bold tracking-widest text-gold uppercase">
+                Di Casa Montenegro
+              </h3>
+            </div>
             <p className="text-xs tracking-widest text-muted uppercase mb-4">
               FCI Registered Kennel · No. 4033
             </p>
             <p className="text-sm text-text/85 leading-relaxed">
-              International FCI Doberman Kennel dedicated to breeding healthy,
-              noble, and strong Dobermans.
+              International FCI Doberman Kennel dedicated to breeding healthy, noble, and strong
+              Dobermans.
             </p>
             <div className="flex gap-5 mt-5">
               <a
@@ -145,9 +155,7 @@ export function Footer() {
                 </a>
               </p>
             </div>
-            <p className="text-xs text-muted tracking-wider">
-              Futog, Serbia · FCI Member
-            </p>
+            <p className="text-xs text-muted tracking-wider">Futog, Serbia · FCI Member</p>
           </div>
         </div>
       </div>
