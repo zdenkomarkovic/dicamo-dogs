@@ -6,7 +6,23 @@
       "Bash(npm:*)",
       "Bash(identify E:/Sajtovi/dicamo-dogs/public/hero.png)",
       "Bash(git add *)",
-      "Bash(git commit -m ' *)"
+      "Bash(git commit -m ' *)",
+      "Bash(findstr -i mafia)",
+      "PowerShell(Add-Type -AssemblyName System.Drawing; $img = [System.Drawing.Image]::FromFile\\(\"E:\\\\Sajtovi\\\\dicamo-dogs\\\\public\\\\news\\\\Flynn-Šamac.jpg\"\\); \"$\\($img.Width\\)x$\\($img.Height\\)\"; $img.Dispose\\(\\))",
+      "PowerShell(Add-Type -AssemblyName System.Drawing; $img = [System.Drawing.Image]::FromFile\\(\"E:\\\\Sajtovi\\\\dicamo-dogs\\\\public\\\\news\\\\flynn-bosna.jpg\"\\); \"$\\($img.Width\\)x$\\($img.Height\\)\"; $img.Dispose\\(\\))",
+      "PowerShell(Add-Type -AssemblyName System.Drawing; $img = [System.Drawing.Image]::FromFile\\(\"E:\\\\Sajtovi\\\\dicamo-dogs\\\\public\\\\news\\\\King-Kiba.jpg\"\\); \"$\\($img.Width\\)x$\\($img.Height\\)\"; $img.Dispose\\(\\))",
+      "PowerShell(Add-Type -AssemblyName System.Drawing; $img = [System.Drawing.Image]::FromFile\\(\"E:\\\\Sajtovi\\\\dicamo-dogs\\\\public\\\\news\\\\Flynn-Natalinci-cacib.jpg\"\\); \"$\\($img.Width\\)x$\\($img.Height\\)\"; $img.Dispose\\(\\))",
+      "PowerShell(Add-Type -AssemblyName System.Drawing; $img = [System.Drawing.Image]::FromFile\\(\"E:\\\\Sajtovi\\\\dicamo-dogs\\\\public\\\\news\\\\Megi-KI.jpg\"\\); \"$\\($img.Width\\)x$\\($img.Height\\)\"; $img.Dispose\\(\\))",
+      "PowerShell(Add-Type -AssemblyName System.Drawing; $img = [System.Drawing.Image]::FromFile\\(\"E:\\\\Sajtovi\\\\dicamo-dogs\\\\public\\\\news\\\\Enzo-1.jpg\"\\); \"$\\($img.Width\\)x$\\($img.Height\\)\"; $img.Dispose\\(\\))",
+      "PowerShell(Add-Type -AssemblyName System.Drawing; $img = [System.Drawing.Image]::FromFile\\(\"E:\\\\Sajtovi\\\\dicamo-dogs\\\\public\\\\news\\\\Josefine-2.jpg\"\\); \"$\\($img.Width\\)x$\\($img.Height\\)\"; $img.Dispose\\(\\))",
+      "PowerShell(Add-Type -AssemblyName System.Drawing; $img = [System.Drawing.Image]::FromFile\\(\"E:\\\\Sajtovi\\\\dicamo-dogs\\\\public\\\\news\\\\vet-znak.jpg\"\\); \"$\\($img.Width\\)x$\\($img.Height\\)\"; $img.Dispose\\(\\))",
+      "PowerShell(Add-Type -AssemblyName System.Drawing; $img = [System.Drawing.Image]::FromFile\\(\"E:\\\\Sajtovi\\\\dicamo-dogs\\\\public\\\\news\\\\Iskander-1.jpg\"\\); \"$\\($img.Width\\)x$\\($img.Height\\)\"; $img.Dispose\\(\\))",
+      "PowerShell(Add-Type -AssemblyName System.Drawing; $img = [System.Drawing.Image]::FromFile\\(\"E:\\\\Sajtovi\\\\dicamo-dogs\\\\public\\\\news\\\\Čestitka-za-Novu-Godinu-i-Božić.jpg\"\\); \"$\\($img.Width\\)x$\\($img.Height\\)\"; $img.Dispose\\(\\))",
+      "PowerShell(Add-Type -AssemblyName System.Drawing; $img = [System.Drawing.Image]::FromFile\\(\"E:\\\\Sajtovi\\\\dicamo-dogs\\\\public\\\\news\\\\Invictus-768x589.jpg\"\\); \"$\\($img.Width\\)x$\\($img.Height\\)\"; $img.Dispose\\(\\))",
+      "PowerShell(Add-Type -AssemblyName System.Drawing; $img = [System.Drawing.Image]::FromFile\\(\"E:\\\\Sajtovi\\\\dicamo-dogs\\\\public\\\\news\\\\316568945_1372395473531685_5428640026226618742_n.png\"\\); \"$\\($img.Width\\)x$\\($img.Height\\)\"; $img.Dispose\\(\\))",
+      "PowerShell(Add-Type -AssemblyName System.Drawing; $img = [System.Drawing.Image]::FromFile\\(\"E:\\\\Sajtovi\\\\dicamo-dogs\\\\public\\\\news\\\\Utz-runung-e1683039912316.jpg\"\\); \"$\\($img.Width\\)x$\\($img.Height\\)\"; $img.Dispose\\(\\))",
+      "PowerShell(Add-Type -AssemblyName System.Drawing; $img = [System.Drawing.Image]::FromFile\\(\"E:\\\\Sajtovi\\\\dicamo-dogs\\\\public\\\\news\\\\5M.jpg\"\\); \"$\\($img.Width\\)x$\\($img.Height\\)\"; $img.Dispose\\(\\))",
+      "PowerShell(Add-Type -AssemblyName System.Drawing; $img = [System.Drawing.Image]::FromFile\\(\"E:\\\\Sajtovi\\\\dicamo-dogs\\\\public\\\\news\\\\4-cup-Becej.jpg\"\\); \"$\\($img.Width\\)x$\\($img.Height\\)\"; $img.Dispose\\(\\))"
     ]
   }
 }
