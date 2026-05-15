@@ -11,7 +11,7 @@ export function AboutSection() {
         <div className="relative">
           <div className="relative aspect-[4/5] overflow-hidden">
             <Image
-              src="/about1.jpg"
+              src="/Rufus cacib niksic (1).jpg"
               alt="Di Casa Montenegro Doberman"
               fill
               className="object-cover transition-all duration-700"

@@ -17,24 +17,36 @@ const sections: Section[] = [
       { name: "Semaco", url: "https://www.semaco.biz/sr/", banner: "/friends/logo-5a.png" },
     ],
   },
-  {
-    title: "Doberman Kennels",
-    partners: [
-      { name: "Betelges", url: "https://www.betelges.net/", banner: "/friends/betelges-logo.png" },
-      { name: "Fort Bellators", url: "http://www.fortbellators.com/", banner: "/friends/logotype.png" },
-      { name: "Altobello Dobermann", url: "https://www.altobellodobermann.com/", banner: "/friends/logo.png" },
-      { name: "Perlanera", url: "https://www.perlanera.hu/", banner: "/friends/1111.png" },
-      { name: "Del Naissus", url: "https://www.delnaissus.net/", banner: "/friends/top_02.jpg" },
-    ],
-  },
+  // {
+  //   title: "Doberman Kennels",
+  //   partners: [
+  //     { name: "Betelges", url: "https://www.betelges.net/", banner: "/friends/betelges-logo.png" },
+  //     { name: "Fort Bellators", url: "http://www.fortbellators.com/", banner: "/friends/logotype.png" },
+  //     { name: "Altobello Dobermann", url: "https://www.altobellodobermann.com/", banner: "/friends/logo.png" },
+  //     { name: "Perlanera", url: "https://www.perlanera.hu/", banner: "/friends/1111.png" },
+  //     { name: "Del Naissus", url: "https://www.delnaissus.net/", banner: "/friends/top_02.jpg" },
+  //   ],
+  // },
   {
     title: "Others",
     partners: [
       { name: "The Dobermann", url: "https://www.the-dobermann.com/", banner: "/friends/logo.jpg" },
-      { name: "Dobermannseite", url: "https://www.dobermannseite.de/", banner: "/friends/cropped-logo.png" },
-      { name: "Inside Dobermann", url: "https://inside-dobermann.blogspot.com/", banner: "/friends/DIblog_header2.jpg" },
+      {
+        name: "Dobermannseite",
+        url: "https://www.dobermannseite.de/",
+        banner: "/friends/cropped-logo.png",
+      },
+      {
+        name: "Inside Dobermann",
+        url: "https://inside-dobermann.blogspot.com/",
+        banner: "/friends/DIblog_header2.jpg",
+      },
       { name: "Doberbase", url: "https://doberbase.ru/", banner: "/friends/doberbase-150x150.png" },
-      { name: "Dogweb", url: "https://www.dogweb.com/", banner: "/friends/cropped-dogweb_com_logo-1536x325.jpg" },
+      {
+        name: "Dogweb",
+        url: "https://www.dogweb.com/",
+        banner: "/friends/cropped-dogweb_com_logo-1536x325.jpg",
+      },
       { name: "Pet Exporters", url: "https://petexporters.com/", banner: "/friends/logo-1.png" },
     ],
   },
@@ -92,7 +104,9 @@ export default function FriendsPartnersPage() {
                             {partner.name}
                           </span>
                           {partner.location && (
-                            <span className="text-xs tracking-widest uppercase text-gold">{partner.location}</span>
+                            <span className="text-xs tracking-widest uppercase text-gold">
+                              {partner.location}
+                            </span>
                           )}
                         </div>
                       )}

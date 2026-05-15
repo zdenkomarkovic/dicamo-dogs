@@ -60,9 +60,8 @@ export default function AboutPage() {
             The Story of the Kennel
           </h1>
           <p className="text-text/85 text-base leading-relaxed max-w-xl">
-            A lifelong passion for Dobermans, three decades of breeding, and a
-            commitment to preserving one of the world&apos;s most iconic working
-            breeds.
+            A lifelong passion for Dobermans, three decades of breeding, and a commitment to
+            preserving one of the world&apos;s most iconic working breeds.
           </p>
         </div>
       </section>
@@ -78,14 +77,14 @@ export default function AboutPage() {
             />
             <div className="mt-8 space-y-4 text-sm text-text/85 leading-relaxed">
               <p>
-                I live in Futog, a place located on the coast of the Danube River
-                near Novi Sad, Serbia. My name is Milan Rudović, and I am an
-                International FCI judge with a deep love for the Doberman breed.
+                I live in Futog, a place located on the coast of the Danube River near Novi Sad,
+                Serbia. My name is Milan Rudović, and I am an International FCI judge with a deep
+                love for the Doberman breed.
               </p>
               <p>
-                My goal has always been clear: to produce healthy, noble, strong
-                Dobermans with open character and big potential for work. Every
-                breeding decision I make is guided by that single purpose.
+                My goal has always been clear: to produce healthy, noble, strong Dobermans with open
+                character and big potential for work. Every breeding decision I make is guided by
+                that single purpose.
               </p>
             </div>
 
@@ -117,7 +116,7 @@ export default function AboutPage() {
           <div className="grid grid-cols-2 gap-4">
             <div className="relative aspect-[3/4] overflow-hidden">
               <Image
-                src="/about1.jpg"
+                src="/Rufus cacib niksic (1).jpg"
                 alt="Di Casa Montenegro Doberman"
                 fill
                 className="object-cover"
@@ -126,7 +125,7 @@ export default function AboutPage() {
             </div>
             <div className="relative aspect-[3/4] overflow-hidden mt-8">
               <Image
-                src="/about2.jpg"
+                src="/breeder.jpeg"
                 alt="Di Casa Montenegro Doberman"
                 fill
                 className="object-cover"
@@ -141,10 +140,7 @@ export default function AboutPage() {
       <section className="py-20 px-6 bg-surface">
         <div className="mx-auto max-w-6xl">
           <div className="mb-16">
-            <SectionTitle
-              eyebrow="History"
-              title="Three Decades of Breeding"
-            />
+            <SectionTitle eyebrow="History" title="Three Decades of Breeding" />
           </div>
 
           <div className="relative">
@@ -166,15 +162,11 @@ export default function AboutPage() {
                   {i % 2 === 0 ? (
                     <>
                       <div className="pl-8 md:pl-0 md:pr-16 md:text-right">
-                        <p className="font-serif text-2xl font-bold text-gold mb-1">
-                          {item.year}
-                        </p>
+                        <p className="font-serif text-2xl font-bold text-gold mb-1">{item.year}</p>
                         <h3 className="font-serif text-xl font-bold text-text mb-3">
                           {item.title}
                         </h3>
-                        <p className="text-sm text-text/85 leading-relaxed">
-                          {item.text}
-                        </p>
+                        <p className="text-sm text-text/85 leading-relaxed">{item.text}</p>
                       </div>
                       <div />
                     </>
@@ -182,15 +174,11 @@ export default function AboutPage() {
                     <>
                       <div />
                       <div className="pl-8 md:pl-16">
-                        <p className="font-serif text-2xl font-bold text-gold mb-1">
-                          {item.year}
-                        </p>
+                        <p className="font-serif text-2xl font-bold text-gold mb-1">{item.year}</p>
                         <h3 className="font-serif text-xl font-bold text-text mb-3">
                           {item.title}
                         </h3>
-                        <p className="text-sm text-text/85 leading-relaxed">
-                          {item.text}
-                        </p>
+                        <p className="text-sm text-text/85 leading-relaxed">{item.text}</p>
                       </div>
                     </>
                   )}
@@ -205,12 +193,10 @@ export default function AboutPage() {
       <section className="py-24 px-6">
         <div className="mx-auto max-w-3xl text-center">
           <p className="font-serif text-2xl md:text-3xl text-text/80 italic leading-relaxed">
-            &ldquo;To breed and preserve this tribal race as everyone recognises
-            and loves it — a Doberman with cropped ears.&rdquo;
+            &ldquo;To breed and preserve this tribal race as everyone recognises and loves it — a
+            Doberman with cropped ears.&rdquo;
           </p>
-          <p className="mt-6 text-xs tracking-widest uppercase text-gold">
-            — Milan Rudović
-          </p>
+          <p className="mt-6 text-xs tracking-widest uppercase text-gold">— Milan Rudović</p>
         </div>
       </section>
     </main>
