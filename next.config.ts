@@ -2,7 +2,7 @@ import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
   reactStrictMode: true,
-  transpilePackages: ["next-sanity", "sanity", "@sanity/ui", "@sanity/icons"],
+  transpilePackages: ["next-sanity"],
 
   images: {
     remotePatterns: [
