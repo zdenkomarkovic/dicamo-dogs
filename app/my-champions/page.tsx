@@ -1,11 +1,15 @@
 import Image from "next/image";
 import { buildMetadata } from "@/lib/metadata";
+import { getSanityChampions } from "@/sanity/lib/championQueries";
+import type { SanityChampion } from "@/sanity/lib/championQueries";
 
 export const metadata = buildMetadata({
   title: "My Champions",
   description:
     "Champion Dobermans bred at Di Casa Montenegro — International FCI Kennel in Futog, Serbia.",
 });
+
+export const revalidate = 60;
 
 type Champion = {
   name: string;
@@ -16,6 +20,16 @@ type Champion = {
   image?: string;
   sex: "male" | "female";
 };
+
+function fromSanity(c: SanityChampion): Champion {
+  return {
+    name: c.name,
+    image: c.imageUrl,
+    sex: c.sex,
+    titles: c.titles ?? [],
+    pedigree: c.pedigree,
+  };
+}
 
 const champions: Champion[] = [
   {
@@ -75,7 +89,7 @@ const champions: Champion[] = [
     sex: "female",
   },
   {
-    name: "Primadonna di Perlanera",
+    name: "Primadonna di Casa Montenegro (Donna)",
     titles: ["INTERNATIONAL CHAMPION"],
     pedigree: "Sant Kreal Zeus – Ferrari Flying di Perlanera",
     image: "/champions/Primadona-1-1.jpg",
@@ -121,13 +135,9 @@ function ChampionCard({ champion }: { champion: Champion }) {
       )}
       <div className="p-6 flex flex-col gap-3 flex-1">
         <div>
-          <h2 className="font-serif text-xl font-bold text-text leading-tight">
-            {champion.name}
-          </h2>
+          <h2 className="font-serif text-xl font-bold text-text leading-tight">{champion.name}</h2>
           {champion.pedigree && (
-            <p className="text-sm text-muted tracking-wide mt-1">
-              {champion.pedigree}
-            </p>
+            <p className="text-sm text-muted tracking-wide mt-1">{champion.pedigree}</p>
           )}
         </div>
         {champion.titles.length > 0 && (
@@ -158,9 +168,12 @@ function ChampionCard({ champion }: { champion: Champion }) {
   );
 }
 
-export default function MyChampionsPage() {
-  const males = champions.filter((c) => c.sex === "male");
-  const females = champions.filter((c) => c.sex === "female");
+export default async function MyChampionsPage() {
+  const sanityChampions = await getSanityChampions().catch(() => []);
+  const allChampions = [...sanityChampions.map(fromSanity), ...champions];
+
+  const males = allChampions.filter((c) => c.sex === "male");
+  const females = allChampions.filter((c) => c.sex === "female");
 
   return (
     <main className="pt-24">
@@ -174,8 +187,7 @@ export default function MyChampionsPage() {
             My Champions
           </h1>
           <p className="text-text/85 text-base leading-relaxed max-w-xl">
-            A selection of champion Dobermans bred and raised at Di Casa
-            Montenegro kennel.
+            A selection of champion Dobermans bred and raised at Di Casa Montenegro kennel.
           </p>
         </div>
       </section>

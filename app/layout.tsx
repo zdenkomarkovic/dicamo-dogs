@@ -2,9 +2,7 @@ import type { Metadata } from "next";
 import { Inter, Playfair_Display } from "next/font/google";
 import "./globals.css";
 import { SITE_NAME, SITE_URL, SITE_DESCRIPTION } from "@/lib/constants";
-import { Navbar } from "@/components/layout/Navbar";
-import { Footer } from "@/components/layout/Footer";
-import { FloatingContact } from "@/components/layout/FloatingContact";
+import { SiteChrome } from "@/components/layout/SiteChrome";
 
 const playfair = Playfair_Display({
   subsets: ["latin"],
@@ -44,10 +42,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${playfair.variable} ${inter.variable}`}>
       <body className="bg-dark text-text font-sans antialiased">
-        <Navbar />
-        {children}
-        <Footer />
-        <FloatingContact />
+        <SiteChrome>{children}</SiteChrome>
       </body>
     </html>
   );

@@ -20,6 +20,7 @@ const images = [
   { src: "/pippieshero/Nemesis.jpg", alt: "Puppies" },
   { src: "/pippieshero/Penelopa-2.jpg", alt: "Puppies" },
   { src: "/pippieshero/spavalice.jpg", alt: "Puppies" },
+  { src: "/pippieshero/dunda - USA.jpg", alt: "Puppies" },
 ];
 
 const grid = [

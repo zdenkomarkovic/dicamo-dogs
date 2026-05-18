@@ -22,7 +22,11 @@
       "PowerShell(Add-Type -AssemblyName System.Drawing; $img = [System.Drawing.Image]::FromFile\\(\"E:\\\\Sajtovi\\\\dicamo-dogs\\\\public\\\\news\\\\316568945_1372395473531685_5428640026226618742_n.png\"\\); \"$\\($img.Width\\)x$\\($img.Height\\)\"; $img.Dispose\\(\\))",
       "PowerShell(Add-Type -AssemblyName System.Drawing; $img = [System.Drawing.Image]::FromFile\\(\"E:\\\\Sajtovi\\\\dicamo-dogs\\\\public\\\\news\\\\Utz-runung-e1683039912316.jpg\"\\); \"$\\($img.Width\\)x$\\($img.Height\\)\"; $img.Dispose\\(\\))",
       "PowerShell(Add-Type -AssemblyName System.Drawing; $img = [System.Drawing.Image]::FromFile\\(\"E:\\\\Sajtovi\\\\dicamo-dogs\\\\public\\\\news\\\\5M.jpg\"\\); \"$\\($img.Width\\)x$\\($img.Height\\)\"; $img.Dispose\\(\\))",
-      "PowerShell(Add-Type -AssemblyName System.Drawing; $img = [System.Drawing.Image]::FromFile\\(\"E:\\\\Sajtovi\\\\dicamo-dogs\\\\public\\\\news\\\\4-cup-Becej.jpg\"\\); \"$\\($img.Width\\)x$\\($img.Height\\)\"; $img.Dispose\\(\\))"
+      "PowerShell(Add-Type -AssemblyName System.Drawing; $img = [System.Drawing.Image]::FromFile\\(\"E:\\\\Sajtovi\\\\dicamo-dogs\\\\public\\\\news\\\\4-cup-Becej.jpg\"\\); \"$\\($img.Width\\)x$\\($img.Height\\)\"; $img.Dispose\\(\\))",
+      "Bash(node -e \"const p = require\\('./node_modules/next/package.json'\\); console.log\\(p.version\\)\")",
+      "Bash(node -e \"console.log\\(require\\('./node_modules/tailwindcss/package.json'\\).version\\)\")",
+      "Bash(node -e \"console.log\\('React:', require\\('./node_modules/react/package.json'\\).version, '\\\\nSanity:', require\\('./node_modules/sanity/package.json'\\).version\\)\")",
+      "Bash(node -e \"console.log\\(require\\('./node_modules/react/package.json'\\).version\\)\")"
     ]
   }
 }

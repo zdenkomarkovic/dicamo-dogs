@@ -1,17 +1,16 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  // Strict mode za React - hvata potencijalne probleme ranije
   reactStrictMode: true,
+  transpilePackages: ["next-sanity", "sanity", "@sanity/ui", "@sanity/icons"],
 
   // Optimizacija slika - dodaj domene po potrebi
   images: {
     remotePatterns: [
-      // Primer:
-      // {
-      //   protocol: "https",
-      //   hostname: "example.com",
-      // },
+      {
+        protocol: "https",
+        hostname: "cdn.sanity.io",
+      },
     ],
   },
 

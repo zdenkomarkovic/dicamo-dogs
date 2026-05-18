@@ -3,13 +3,13 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useState, useRef } from "react";
-import { news } from "@/lib/news";
+import type { NewsItem } from "@/lib/news";
 import { SectionTitle } from "@/components/ui/SectionTitle";
 
 const PER_PAGE = 10;
-const sorted = [...news].sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
 
-export function News() {
+export function News({ items: allItems }: { items: NewsItem[] }) {
+  const sorted = [...allItems].sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
   const [page, setPage] = useState(1);
   const sectionRef = useRef<HTMLElement>(null);
   const totalPages = Math.ceil(sorted.length / PER_PAGE);

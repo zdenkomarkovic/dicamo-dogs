@@ -1,5 +1,6 @@
 import { buildMetadata } from "@/lib/metadata";
 import { GallerySection } from "./GallerySection";
+import { getGalleryImages, urlFor } from "@/sanity/lib/queries";
 
 export const metadata = buildMetadata({
   title: "Gallery",
@@ -7,9 +8,12 @@ export const metadata = buildMetadata({
     "Photos of Dobermans from Di Casa Montenegro kennel — International Champion dogs bred in Futog, Serbia.",
 });
 
-type GallerySectionData = { title: string; images: { src: string; alt: string; caption?: string }[] };
+export const revalidate = 60;
 
-const sections: GallerySectionData[] = [
+type GalleryImage = { src: string; alt: string; caption?: string };
+type GallerySectionData = { title: string; images: GalleryImage[] };
+
+const staticSections: GallerySectionData[] = [
   {
     title: "Dogs with new owners",
     images: [
@@ -73,10 +77,22 @@ const sections: GallerySectionData[] = [
   },
 ];
 
-export default function GalleryPage() {
+export default async function GalleryPage() {
+  const sanityImages = await getGalleryImages().catch(() => []);
+
+  const sections = staticSections.map((section) => {
+    const extra = sanityImages
+      .filter((img) => img.category === section.title)
+      .map((img) => ({
+        src: urlFor(img.image).width(900).url(),
+        alt: "Di Casa Montenegro",
+        caption: img.caption,
+      }));
+    return { ...section, images: [...extra, ...section.images] };
+  });
+
   return (
     <main className="pt-24">
-      {/* Header */}
       <section className="py-20 px-6 border-b border-border">
         <div className="mx-auto max-w-6xl">
           <p className="text-xs tracking-[0.4em] uppercase text-gold mb-4 font-semibold">
@@ -92,7 +108,6 @@ export default function GalleryPage() {
         </div>
       </section>
 
-      {/* Gallery sections */}
       <section className="py-20 px-6">
         <div className="mx-auto max-w-6xl space-y-20">
           {sections.map((section) => (

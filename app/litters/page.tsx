@@ -1,10 +1,13 @@
 import { buildMetadata } from "@/lib/metadata";
 import { LitterCard } from "./LitterCard";
+import { getSanityLitters } from "@/sanity/lib/litterQueries";
 
 export const metadata = buildMetadata({
   title: "Litters",
   description: "Past and current litters from Di Casa Montenegro Doberman kennel.",
 });
+
+export const revalidate = 60;
 
 type Litter = {
   title: string;
@@ -401,7 +404,10 @@ const litters: Litter[] = [
   },
 ];
 
-export default function LittersPage() {
+export default async function LittersPage() {
+  const sanityLitters = await getSanityLitters().catch(() => []);
+  const allLitters = [...sanityLitters, ...litters];
+
   return (
     <main className="pt-24">
       {/* Header */}
@@ -421,8 +427,8 @@ export default function LittersPage() {
 
       <section className="py-16 px-6">
         <div className="mx-auto max-w-6xl grid grid-cols-1 md:grid-cols-2 gap-8">
-          {litters.map((litter) => (
-            <LitterCard key={litter.title} litter={litter} />
+          {allLitters.map((litter, i) => (
+            <LitterCard key={`${litter.title}-${i}`} litter={litter} />
           ))}
         </div>
       </section>

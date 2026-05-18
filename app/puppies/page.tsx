@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { buildMetadata } from "@/lib/metadata";
 import { litters } from "@/lib/litters";
+import { getSanityPuppyLitters } from "@/sanity/lib/puppyLitterQueries";
 import { PedigreeToggle } from "@/components/ui/PedigreeToggle";
 import { PuppiesHero } from "./PuppiesHero";
 
@@ -10,7 +11,12 @@ export const metadata = buildMetadata({
     "Available puppies and upcoming litters from Di Casa Montenegro — International FCI Doberman Kennel in Futog, Serbia.",
 });
 
-export default function PuppiesPage() {
+export const revalidate = 60;
+
+export default async function PuppiesPage() {
+  const sanityLitters = await getSanityPuppyLitters().catch(() => []);
+  const allLitters = [...sanityLitters, ...litters];
+
   return (
     <main className="pt-24">
       <PuppiesHero />
@@ -18,7 +24,7 @@ export default function PuppiesPage() {
       {/* Litters */}
       <section className="py-20 px-6">
         <div className="mx-auto max-w-6xl space-y-20">
-          {litters.map((litter) => (
+          {allLitters.map((litter) => (
             <div key={litter.letter} className="border border-border">
               {/* Litter header */}
               <div className="flex items-center gap-6 px-8 py-6 border-b border-border bg-[#1a1a1a]">

@@ -1,5 +1,4 @@
-export const SITE_URL =
-  process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000";
+export const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000";
 
 export const SITE_NAME = "Di Casa Montenegro";
 
@@ -28,11 +27,12 @@ export const SOCIAL = {
 
 export const NAV_LINKS = [
   { label: "Home", href: "/" },
+  { label: "News", href: "/news" },
   { label: "About", href: "/about" },
   { label: "Puppies", href: "/puppies" },
   { label: "Litters", href: "/litters" },
+  { label: "My Dogs", href: "/my-dogs" },
   { label: "My Champions", href: "/my-champions" },
-  { label: "News", href: "/news" },
   { label: "Gallery", href: "/gallery" },
   { label: "Video", href: "/video" },
   { label: "Friends & Partners", href: "/friends-partners" },
