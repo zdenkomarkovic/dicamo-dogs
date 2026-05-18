@@ -36,7 +36,8 @@
       "Bash(node -e \"const p = require\\('@sanity/image-url/package.json'\\); console.log\\(p.version, Object.keys\\(p.exports||{}\\).slice\\(0,8\\)\\)\")",
       "Bash(node -e \"const t = require\\('@sanity/image-url'\\); console.log\\(Object.keys\\(t\\)\\)\")",
       "Bash(node -e \"const p = require\\('@sanity/image-url/package.json'\\); console.log\\(JSON.stringify\\(p.exports['.'], null, 2\\)\\)\")",
-      "Bash(node -e \"const iu = require\\('@sanity/image-url'\\); console.log\\(Object.keys\\(require\\('@sanity/image-url'\\)\\)\\)\")"
+      "Bash(node -e \"const iu = require\\('@sanity/image-url'\\); console.log\\(Object.keys\\(require\\('@sanity/image-url'\\)\\)\\)\")",
+      "Bash(Remove-Item *)"
     ]
   }
 }

@@ -53,7 +53,7 @@ export function News({ items: allItems }: { items: NewsItem[] }) {
                     <h3 className="font-serif text-xl font-bold text-text mb-3">
                       {item.title}
                     </h3>
-                    <div className="text-sm text-text/85 leading-relaxed space-y-3 mb-8">
+                    <div className="text-sm text-text/85 leading-relaxed space-y-3 mb-8 break-words">
                       {item.text.split("\n\n").map((para, i) => (
                         <p key={i}>{para}</p>
                       ))}
@@ -68,15 +68,15 @@ export function News({ items: allItems }: { items: NewsItem[] }) {
                       )}
                     </div>
                     {item.images && item.images.length > 0 && (
-                      <div className="flex flex-wrap gap-4 items-end">
+                      <div className="flex flex-col sm:flex-row sm:flex-wrap gap-4 sm:items-end">
                         {item.images.map((img) => (
-                          <div key={img.src} className="shrink-0 overflow-hidden">
+                          <div key={img.src} className="overflow-hidden">
                             <Image
                               src={img.src}
                               alt={img.alt}
                               width={800}
                               height={600}
-                              className={`w-auto hover:scale-105 transition-transform duration-500 ${img.portrait ? "h-[500px]" : "h-80"}`}
+                              className={`w-full h-auto sm:w-auto hover:scale-105 transition-transform duration-500 ${img.portrait ? "sm:h-[500px]" : "sm:h-80"}`}
                               unoptimized
                             />
                           </div>

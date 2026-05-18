@@ -9,7 +9,10 @@ import { NAV_LINKS } from "@/lib/constants";
 export function Navbar() {
   const pathname = usePathname();
   const [open, setOpen] = useState(false);
-  const [guestbookOpen, setGuestbookOpen] = useState(false);
+  const [openDropdown, setOpenDropdown] = useState<string | null>(null);
+
+  const toggleDropdown = (label: string) =>
+    setOpenDropdown((prev) => (prev === label ? null : label));
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 border-b border-border bg-dark/95 backdrop-blur-sm">
@@ -30,13 +33,13 @@ export function Navbar() {
         </Link>
 
         {/* Desktop nav */}
-        <ul className="hidden items-center gap-5 md:flex">
+        <ul className="hidden items-center gap-4 lg:flex">
           {NAV_LINKS.map((link) =>
             link.dropdown ? (
               <li key={link.label} className="relative group">
-                <button className="text-xs tracking-wider uppercase transition-colors duration-200 text-text/85 hover:text-gold flex items-center gap-1">
+                <button className="text-xs tracking-wide uppercase transition-colors duration-200 text-text/85 hover:text-gold inline-flex items-center gap-1 leading-none">
                   {link.label}
-                  <svg className="w-3 h-3 mt-0.5 transition-transform duration-200 group-hover:rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                  <svg className="w-3 h-3 transition-transform duration-200 group-hover:rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                     <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
                   </svg>
                 </button>
@@ -58,7 +61,7 @@ export function Navbar() {
               <li key={link.href}>
                 <Link
                   href={link.href!}
-                  className={`text-xs tracking-wider uppercase transition-colors duration-200 ${
+                  className={`text-xs tracking-wide uppercase transition-colors duration-200 leading-none ${
                     pathname === link.href ? "text-gold" : "text-text/85 hover:text-gold"
                   }`}
                 >
@@ -71,7 +74,7 @@ export function Navbar() {
 
         {/* Mobile toggle */}
         <button
-          className="flex flex-col gap-1.5 md:hidden"
+          className="flex flex-col gap-1.5 lg:hidden"
           onClick={() => setOpen(!open)}
           aria-label="Toggle menu"
         >
@@ -89,18 +92,18 @@ export function Navbar() {
 
       {/* Mobile menu */}
       {open && (
-        <div className="border-t border-border bg-dark md:hidden">
+        <div className="border-t border-border bg-dark lg:hidden">
           <ul className="flex flex-col px-6 py-4 gap-4">
             {NAV_LINKS.map((link) =>
               link.dropdown ? (
                 <li key={link.label}>
                   <button
-                    onClick={() => setGuestbookOpen(!guestbookOpen)}
+                    onClick={() => toggleDropdown(link.label)}
                     className="flex items-center gap-1 text-sm tracking-widest uppercase text-text/85 hover:text-gold transition-colors duration-200"
                   >
                     {link.label}
                     <svg
-                      className={`w-3 h-3 mt-0.5 transition-transform duration-200 ${guestbookOpen ? "rotate-180" : ""}`}
+                      className={`w-3 h-3 mt-0.5 transition-transform duration-200 ${openDropdown === link.label ? "rotate-180" : ""}`}
                       fill="none"
                       viewBox="0 0 24 24"
                       stroke="currentColor"
@@ -109,7 +112,7 @@ export function Navbar() {
                       <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
                     </svg>
                   </button>
-                  {guestbookOpen && (
+                  {openDropdown === link.label && (
                     <ul className="mt-2 ml-4 flex flex-col gap-3">
                       {link.dropdown.map((sub) => (
                         <li key={sub.href}>

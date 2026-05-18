@@ -33,8 +33,14 @@ export const NAV_LINKS = [
   { label: "Litters", href: "/litters" },
   { label: "My Dogs", href: "/my-dogs" },
   { label: "My Champions", href: "/my-champions" },
-  { label: "Gallery", href: "/gallery" },
-  { label: "Video", href: "/video" },
+  {
+    label: "Gallery",
+    href: "#",
+    dropdown: [
+      { label: "Photo Gallery", href: "/gallery", external: false },
+      { label: "Video", href: "/video", external: false },
+    ],
+  },
   { label: "Friends & Partners", href: "/friends-partners" },
   {
     label: "Guestbook",

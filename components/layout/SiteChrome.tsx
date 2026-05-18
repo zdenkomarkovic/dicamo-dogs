@@ -5,7 +5,13 @@ import { Navbar } from "./Navbar";
 import { Footer } from "./Footer";
 import { FloatingContact } from "./FloatingContact";
 
-export function SiteChrome({ children }: { children: React.ReactNode }) {
+export function SiteChrome({
+  children,
+  floatingAnnouncements,
+}: {
+  children: React.ReactNode;
+  floatingAnnouncements?: React.ReactNode;
+}) {
   const pathname = usePathname();
   const isStudio = pathname.startsWith("/studio");
 
@@ -14,6 +20,7 @@ export function SiteChrome({ children }: { children: React.ReactNode }) {
       {!isStudio && <Navbar />}
       {children}
       {!isStudio && <Footer />}
+      {!isStudio && floatingAnnouncements}
       {!isStudio && <FloatingContact />}
     </>
   );

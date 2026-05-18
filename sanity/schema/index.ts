@@ -4,5 +4,6 @@ import { champion } from "./champion";
 import { litter } from "./litter";
 import { puppyLitter } from "./puppyLitter";
 import { newsItem } from "./newsItem";
+import { plannedLitter } from "./plannedLitter";
 
-export const schemaTypes = [dog, champion, litter, puppyLitter, newsItem, galleryImage];
+export const schemaTypes = [dog, champion, litter, puppyLitter, newsItem, plannedLitter, galleryImage];

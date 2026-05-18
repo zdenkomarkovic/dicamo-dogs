@@ -3,6 +3,7 @@ import { Inter, Playfair_Display } from "next/font/google";
 import "./globals.css";
 import { SITE_NAME, SITE_URL, SITE_DESCRIPTION } from "@/lib/constants";
 import { SiteChrome } from "@/components/layout/SiteChrome";
+import { FloatingAnnouncementsServer } from "@/components/layout/FloatingAnnouncementsServer";
 
 const playfair = Playfair_Display({
   subsets: ["latin"],
@@ -42,7 +43,9 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${playfair.variable} ${inter.variable}`}>
       <body className="bg-dark text-text font-sans antialiased">
-        <SiteChrome>{children}</SiteChrome>
+        <SiteChrome floatingAnnouncements={<FloatingAnnouncementsServer />}>
+          {children}
+        </SiteChrome>
       </body>
     </html>
   );
