@@ -37,13 +37,13 @@ const history = [
   },
   {
     year: "Hungary",
-    title: "Ferrari Flying di Perlanera",
-    text: "I realised I needed new blood in the kennel and chose to bring a puppy from the renowned Perlanera kennel in Hungary — Ferrari Flying di Perlanera. She grew into a beautiful dog, achieved International Champion status, and became the foundation of my breeding programme.",
+    title: "Primadonna (Donna) di Perlanera",
+    text: "I realised I needed new blood in the kennel and chose to bring a puppy from the renowned Perlanera kennel in Hungary — Primadonna (Donna) di Perlanera. She grew into a beautiful dog, achieved International Champion status, and became the foundation of my breeding programme.",
   },
   {
     year: "Today",
     title: "A Global Kennel",
-    text: "Ferrari was bred with many famous dogs: Guard de Marine de Grande Vinko, Oz di Casa Giardino, Blackjack Bluffer v Jahrestal, and Gaudi di Caresi. Today, dogs from Di Casa Montenegro can be found all around the world. My customers have become friends, and their kind words give me the strength to continue — to breed and preserve this tribal race as everyone recognises and loves it. A Doberman with cropped ears.",
+    text: "Primadonna (Donna) was bred with many famous dogs: Guard de Marine de Grande Vinko, Oz di Casa Giardino, Blackjack Bluffer v Jahrestal, and Gaudi di Caresi. Today, dogs from Di Casa Montenegro can be found all around the world. My customers have become friends, and their kind words give me the strength to continue — to breed and preserve this tribal race as everyone recognises and loves it. A Doberman with cropped ears.",
   },
 ];
 
@@ -189,16 +189,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Quote */}
-      <section className="py-24 px-6">
-        <div className="mx-auto max-w-3xl text-center">
-          <p className="font-serif text-2xl md:text-3xl text-text/80 italic leading-relaxed">
-            &ldquo;To breed and preserve this tribal race as everyone recognises and loves it — a
-            Doberman with cropped ears.&rdquo;
-          </p>
-          <p className="mt-6 text-xs tracking-widest uppercase text-gold">— Milan Rudović</p>
-        </div>
-      </section>
+
     </main>
   );
 }

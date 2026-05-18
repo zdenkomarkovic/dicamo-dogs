@@ -452,7 +452,7 @@ export const news: NewsItem[] = [
   {
     date: "2026-03-17",
     title: "Greetings from Italy",
-    text: "XANADU DI CASA MONTENEGRO\n\n(Ruffus di Casa Montenegro – Assy)",
+    text: "XANTIA DI CASA MONTENEGRO\n\n(Ruffus di Casa Montenegro – Assy)",
     icon: "/Italy-150x150.png",
     images: [
       { src: "/Xantia-Yuma.jpg", alt: "Xanadu di Casa Montenegro", portrait: true },
