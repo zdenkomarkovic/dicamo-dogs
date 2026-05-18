@@ -1,6 +1,6 @@
 import { client } from "./client";
 import imageUrlBuilder from "@sanity/image-url";
-import type { SanityImageSource } from "@sanity/image-url/lib/types/types";
+import type { SanityImageSource } from "@sanity/image-url";
 
 const builder = imageUrlBuilder(client);
 export const dogImageUrl = (source: SanityImageSource) => builder.image(source);
@@ -41,7 +41,7 @@ type RawDog = {
 };
 
 function mapDog(d: RawDog): SanityDog {
-  const mapParent = (p?: RawDog["pedigree"]["sire"]) => {
+  const mapParent = (p?: NonNullable<RawDog["pedigree"]>["sire"]) => {
     if (!p) return undefined;
     return {
       ...p,

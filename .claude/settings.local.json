@@ -26,7 +26,17 @@
       "Bash(node -e \"const p = require\\('./node_modules/next/package.json'\\); console.log\\(p.version\\)\")",
       "Bash(node -e \"console.log\\(require\\('./node_modules/tailwindcss/package.json'\\).version\\)\")",
       "Bash(node -e \"console.log\\('React:', require\\('./node_modules/react/package.json'\\).version, '\\\\nSanity:', require\\('./node_modules/sanity/package.json'\\).version\\)\")",
-      "Bash(node -e \"console.log\\(require\\('./node_modules/react/package.json'\\).version\\)\")"
+      "Bash(node -e \"console.log\\(require\\('./node_modules/react/package.json'\\).version\\)\")",
+      "Bash(node -e \"const r = require\\('react'\\); console.log\\(Object.keys\\(r\\).filter\\(k => k.toLowerCase\\(\\).includes\\('effect'\\)\\)\\)\")",
+      "Bash(node -e \"const lock = require\\('./package-lock.json'\\); const r = lock.packages['node_modules/react']; console.log\\(r?.version\\)\")",
+      "Bash(node -e \"const pkg = require\\('./node_modules/react/package.json'\\); console.log\\(JSON.stringify\\(pkg.exports, null, 2\\)\\)\")",
+      "Bash(node -e \"const r = require\\('react/cjs/react.production.js'\\); console.log\\('useEffectEvent' in r\\)\")",
+      "Bash(grep -v \"//\")",
+      "Bash(node -e \"const p = require\\('./node_modules/sanity/package.json'\\); console.log\\('type:', p.type, '\\\\nexports keys:', Object.keys\\(p.exports || {}\\).slice\\(0,5\\)\\)\")",
+      "Bash(node -e \"const p = require\\('@sanity/image-url/package.json'\\); console.log\\(p.version, Object.keys\\(p.exports||{}\\).slice\\(0,8\\)\\)\")",
+      "Bash(node -e \"const t = require\\('@sanity/image-url'\\); console.log\\(Object.keys\\(t\\)\\)\")",
+      "Bash(node -e \"const p = require\\('@sanity/image-url/package.json'\\); console.log\\(JSON.stringify\\(p.exports['.'], null, 2\\)\\)\")",
+      "Bash(node -e \"const iu = require\\('@sanity/image-url'\\); console.log\\(Object.keys\\(require\\('@sanity/image-url'\\)\\)\\)\")"
     ]
   }
 }
