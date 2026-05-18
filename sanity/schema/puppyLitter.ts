@@ -86,7 +86,8 @@ export const puppyLitter = defineType({
     defineField({
       name: "expectedDate",
       title: "Expected Date",
-      type: "date",
+      description: 'e.g. "April 2026", "Spring 2026"',
+      type: "string",
     }),
     defineField({
       name: "intro",

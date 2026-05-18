@@ -76,7 +76,7 @@ function mapLitter(r: RawPuppyLitter): Litter {
   return {
     letter: r.letter,
     status: r.status ?? "expected",
-    expectedDate: formatExpectedDate(r.expectedDate),
+    expectedDate: r.expectedDate ?? "",
     intro: r.intro ?? "",
     note: r.note,
     parents,
@@ -84,16 +84,9 @@ function mapLitter(r: RawPuppyLitter): Litter {
   };
 }
 
-function formatExpectedDate(iso?: string): string {
-  if (!iso) return "";
-  const [year, month] = iso.split("-");
-  const date = new Date(Number(year), Number(month) - 1, 1);
-  return date.toLocaleDateString("en-GB", { month: "long", year: "numeric" });
-}
-
 export async function getSanityPuppyLitters(): Promise<Litter[]> {
   const raw: RawPuppyLitter[] = await client.fetch(
-    `*[_type == "puppyLitter"] | order(expectedDate desc) {
+    `*[_type == "puppyLitter"] | order(_createdAt desc) {
       letter, status, expectedDate, intro, note,
       sire { ${parentFragment} },
       dam { ${parentFragment} },
