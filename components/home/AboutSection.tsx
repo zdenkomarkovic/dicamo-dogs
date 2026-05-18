@@ -6,6 +6,15 @@ import { OWNER } from "@/lib/constants";
 export function AboutSection() {
   return (
     <section className="py-24 px-6">
+      <div className="mx-auto max-w-6xl">
+        <blockquote className="mb-16 text-center max-w-2xl mx-auto">
+          <p className="font-serif text-base md:text-lg text-text/80 italic leading-relaxed">
+            &ldquo;To breed and preserve this tribal race as everyone recognises and loves it —<br />a Doberman with cropped ears.&rdquo;
+          </p>
+          <p className="mt-2 text-xs tracking-widest uppercase text-gold">Milan Rudović</p>
+        </blockquote>
+      </div>
+
       <div className="mx-auto max-w-6xl grid grid-cols-1 gap-16 lg:grid-cols-2 lg:gap-24 items-center">
         {/* Images */}
         <div className="relative">

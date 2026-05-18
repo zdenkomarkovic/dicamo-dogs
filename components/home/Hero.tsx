@@ -39,11 +39,6 @@ export function Hero() {
         </p>
         <p className="text-white/90 text-sm tracking-wider mb-12">Futog, Serbia</p>
 
-        <p className="font-serif text-base md:text-lg text-white/70 italic leading-relaxed mb-2 max-w-2xl mx-auto">
-          &ldquo;To breed and preserve this tribal race as everyone recognises and loves it — a Doberman with cropped ears.&rdquo;
-        </p>
-        <p className="text-xs tracking-widest uppercase text-gold mb-10">Milan Rudović</p>
-
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <Link
             href="/about"
