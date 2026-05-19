@@ -72,7 +72,7 @@ const staticSections: GallerySectionData[] = [
     title: "Funny dogs",
     images: [
       { src: "/Funny dogs/20240323_135811-768x832.jpg", alt: "Funny dog", caption: "With Baixo Mino Dior – IDC Sieger" },
-      { src: "/Funny dogs/cute-dogs1.jpg", alt: "Funny dog" },
+      { src: "/Funny dogs/cute-dogs1.jpg", alt: "Funny dog", caption: "My first litter 10 days old" },
     ],
   },
 ];
@@ -88,7 +88,10 @@ export default async function GalleryPage() {
         alt: "Di Casa Montenegro",
         caption: img.caption,
       }));
-    return { ...section, images: [...extra, ...section.images] };
+    return {
+      ...section,
+      images: [section.images[0], ...extra, ...section.images.slice(1)],
+    };
   });
 
   return (

@@ -84,7 +84,7 @@ export function PuppiesHero() {
         {/* Overlay text */}
         <div className="absolute inset-0 bg-gradient-to-b from-dark/70 via-dark/20 to-dark/60 pointer-events-none" />
         <div className="absolute inset-0 flex flex-col items-center justify-center pointer-events-none">
-          <p className="text-xs tracking-[0.4em] uppercase text-gold mb-3 font-semibold drop-shadow">
+          <p className="text-lg tracking-[0.6em] uppercase text-white mb-4 font-bold drop-shadow">
             Di Casa Montenegro
           </p>
           <h1 className="font-serif text-6xl md:text-8xl font-bold text-white drop-shadow-lg">
@@ -94,50 +94,57 @@ export function PuppiesHero() {
       </section>
 
       {/* Lightbox */}
-      {lightbox !== null && (() => {
-        const current = images[lightbox]!;
-        return (
-          <div
-            className="fixed inset-0 z-50 bg-dark/95 flex items-center justify-center"
-            onClick={() => setLightbox(null)}
-          >
-            <button
-              onClick={() => setLightbox(null)}
-              className="absolute top-6 right-6 text-text/60 hover:text-gold transition-colors duration-200 text-2xl leading-none z-10"
-            >
-              ✕
-            </button>
-            <span className="absolute top-6 left-1/2 -translate-x-1/2 text-xs tracking-widest uppercase text-muted">
-              {lightbox + 1} / {images.length}
-            </span>
-            <button
-              onClick={(e) => { e.stopPropagation(); prev(); }}
-              className="absolute left-4 md:left-8 text-text/60 hover:text-gold transition-colors duration-200 text-3xl z-10 p-4"
-            >
-              ←
-            </button>
+      {lightbox !== null &&
+        (() => {
+          const current = images[lightbox]!;
+          return (
             <div
-              className="relative max-w-4xl max-h-[85vh] w-full mx-20"
-              onClick={(e) => e.stopPropagation()}
+              className="fixed inset-0 z-50 bg-dark/95 flex items-center justify-center"
+              onClick={() => setLightbox(null)}
             >
-              <Image
-                src={current.src}
-                alt={current.alt}
-                width={1200}
-                height={900}
-                className="object-contain max-h-[85vh] w-full h-auto"
-                unoptimized
-              />
+              <button
+                onClick={() => setLightbox(null)}
+                className="absolute top-6 right-6 text-text/60 hover:text-gold transition-colors duration-200 text-2xl leading-none z-10"
+              >
+                ✕
+              </button>
+              <span className="absolute top-6 left-1/2 -translate-x-1/2 text-xs tracking-widest uppercase text-muted">
+                {lightbox + 1} / {images.length}
+              </span>
+              <button
+                onClick={(e) => {
+                  e.stopPropagation();
+                  prev();
+                }}
+                className="absolute left-4 md:left-8 text-text/60 hover:text-gold transition-colors duration-200 text-3xl z-10 p-4"
+              >
+                ←
+              </button>
+              <div
+                className="relative max-w-4xl max-h-[85vh] w-full mx-20"
+                onClick={(e) => e.stopPropagation()}
+              >
+                <Image
+                  src={current.src}
+                  alt={current.alt}
+                  width={1200}
+                  height={900}
+                  className="object-contain max-h-[85vh] w-full h-auto"
+                  unoptimized
+                />
+              </div>
+              <button
+                onClick={(e) => {
+                  e.stopPropagation();
+                  next();
+                }}
+                className="absolute right-4 md:right-8 text-text/60 hover:text-gold transition-colors duration-200 text-3xl z-10 p-4"
+              >
+                →
+              </button>
             </div>
-            <button
-              onClick={(e) => { e.stopPropagation(); next(); }}
-              className="absolute right-4 md:right-8 text-text/60 hover:text-gold transition-colors duration-200 text-3xl z-10 p-4"
-            >
-              →
-            </button>
-          </div>
-        );
-      })()}
+          );
+        })()}
     </>
   );
 }
